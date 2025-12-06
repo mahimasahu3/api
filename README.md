@@ -1,30 +1,22 @@
 # api
 API Integration
 
-Below is a **clean, professional, beginner-friendly README.md** you can directly use for your Spring Boot project that fetches data from an external API and exposes its own endpoints.
-
----
-
 # 🚀 API Aggregator Service – Spring Boot
 
-A lightweight Spring Boot application that **fetches data from an external API** (jsonplaceholder.typicode.com) and **exposes its own REST endpoints** after processing the data.
+A lightweight Spring Boot application that fetches data from an external API (jsonplaceholder.typicode.com) and exposes its own REST endpoints after processing the data.
 
-This project demonstrates a real-world **Backend-for-Frontend (BFF) / API Proxy / API Aggregator** architecture.
-
----
+This project demonstrates a real-world Backend-for-Frontend (BFF) / API Proxy / API Aggregator architecture.
 
 ## 📌 Features
 
-* 🌐 Fetch data from external REST APIs
-* 🔄 Expose processed data through your own REST endpoints
-* 🛠 Clean architecture using Controller → Service → API Client
-* 🧾 DTO-based response mapping
-* ⚠️ Centralized error handling
-* 📊 Proper logging
-* 🗂 Extensible structure for adding more APIs
-* ⚡ Optional caching support
-
----
+ 🌐 Fetch data from external REST APIs
+ 🔄 Expose processed data through your own REST endpoints
+ 🛠 Clean architecture using Controller → Service → API Client
+ 🧾 DTO-based response mapping
+ ⚠️ Centralized error handling
+ 📊 Proper logging
+ 🗂 Extensible structure for adding more APIs
+ ⚡ Optional caching support
 
 ## 🏗 Project Architecture
 
@@ -62,17 +54,15 @@ https://jsonplaceholder.typicode.com/posts
 
 This API provides sample posts in JSON format, useful for learning, demos, and prototyping backend integrations.
 
----
-
 ## 🧩 How the System Works
 
 1. Client hits your API:
-   **GET /api/posts**
+   GET /api/posts
 
 2. Your Spring Boot service internally calls:
-   **GET [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)**
+   GET [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
 
-3. Response is mapped to your **DTO** (PostDto)
+3. Response is mapped to your DTO (PostDto)
 
 4. Business logic (optional):
 
@@ -86,11 +76,10 @@ This API provides sample posts in JSON format, useful for learning, demos, and p
 
 ## 🔧 Technologies Used
 
-* **Java 17+**
-* **Spring Boot** (Web, Validation)
-* **RestTemplate** or **WebClient**
-* **Maven**
-* **Lombok** (optional but recommended)
+* Java 17+
+* Spring Boot (Web, Validation)
+* RestTemplate
+* Maven
 
 ---
 
@@ -117,23 +106,14 @@ Minimum dependencies:
         <optional>true</optional>
     </dependency>
 
-    <!-- Optional: if you use WebClient -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-webflux</artifactId>
-    </dependency>
-</dependencies>
-```
-
----
 
 ## ▶️ Running the Application
 
 ### **1. Clone the repository**
 
 ```
-git clone https://github.com/yourname/api-aggregator-service.git
-cd api-aggregator-service
+git clone https://github.com/yourname/api.git
+cd api
 ```
 
 ### **2. Run with Maven**
@@ -165,38 +145,7 @@ You will receive processed JSON posts sourced from jsonplaceholder.
 ]
 ```
 
----
-
-## 🧱 Extend the Project
-
-You can easily add more features:
-
-* Cache the external API data
-* Merge multiple APIs (users + posts)
-* Send data to a database
-* Add authentication
-* Convert this into a microservice
-* Add UI and call your API from Angular/React
-
----
-
-## 📜 License
-
-This project is open for learning and portfolio purposes.
-
----
-
 ## 🙋‍♀️ Author
 
 Your Name (Mahima Sahu)
-
----
-
-If you want, I can also generate:
-✔ UML Diagram
-✔ API Documentation (Swagger formatted)
-✔ Architecture Diagram (PNG)
-✔ Full video script for your demo presentation
-
-Just tell me.
 
