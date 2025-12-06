@@ -9,13 +9,11 @@ This project demonstrates a real-world Backend-for-Frontend (BFF) / API Proxy / 
 ## 📌 Features
 
  🌐 Fetch data from external REST APIs
- 🔄 Expose processed data through your own REST endpoints
+ 🔄 Expose processed data through own REST endpoints
  🛠 Clean architecture using Controller → Service → API Client
  🧾 DTO-based response mapping
  ⚠️ Centralized error handling
- 📊 Proper logging
  🗂 Extensible structure for adding more APIs
- ⚡ Optional caching support
 
 ## 🏗 Project Architecture
 
@@ -36,16 +34,13 @@ src/main/java/com/example/apiproxy
 │
 └── exception
       ├── ApiException.java
-      └── GlobalExceptionHandler.java
 ```
 
 This structure follows best practices for scalable backend applications.
 
----
-
 ## 🔗 External API Used
 
-We use the free testing API:
+I used the free testing API:
 
 ```
 https://jsonplaceholder.typicode.com/posts
@@ -55,23 +50,15 @@ This API provides sample posts in JSON format, useful for learning, demos, and p
 
 ## 🧩 How the System Works
 
-1. Client hits your API:
+1. Client hits API:
    GET /api/posts
 
-2. Your Spring Boot service internally calls:
+2. Spring Boot service internally calls:
    GET [https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)
 
 3. Response is mapped to your DTO (PostDto)
 
-4. Business logic (optional):
-
-   * filtering
-   * mapping
-   * combining multiple API results
-
-5. Your API returns clean JSON to the caller.
-
----
+4. API returns clean JSON to the caller.
 
 ## 🔧 Technologies Used
 
@@ -105,10 +92,10 @@ Minimum dependencies:
         <optional>true</optional>
     </dependency>
 
-
+```
 ## ▶️ Running the Application
 
-### **1. Clone the repository**
+### 1. Clone the repository
 
 ```
 git clone https://github.com/yourname/api.git
@@ -122,19 +109,24 @@ cd api
 mvn spring-boot:run
 ```
 
-### 3. Access your endpoint
+### 3. Access your endpoint (can use postman too)
 
 ```
+GET http://localhost:8080/api/refresh
 GET http://localhost:8080/api/posts
+GET http://localhost:8080/api/users
+GET http://localhost:8080/api/posts/{userID}
+GET http://localhost:8080/api/posts/{ID}
+GET http://localhost:8080/api/users/{ID}
 ```
 
 You will receive processed JSON posts sourced from jsonplaceholder.
 
----
 
 ## 📘 Sample Response
 
-```json
+```
+json
 [
   {
     "id": 1,
@@ -143,6 +135,7 @@ You will receive processed JSON posts sourced from jsonplaceholder.
   },
   ...
 ]
+
 ```
 
 ## 🙋‍♀️ Author
