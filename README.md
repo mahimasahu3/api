@@ -112,16 +112,17 @@ Minimum dependencies:
 
 ```
 git clone https://github.com/yourname/api.git
+
 cd api
 ```
 
-### **2. Run with Maven**
+### 2. Run with Maven
 
 ```
 mvn spring-boot:run
 ```
 
-### **3. Access your endpoint**
+### 3. Access your endpoint
 
 ```
 GET http://localhost:8080/api/posts
