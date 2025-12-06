@@ -1,4 +1,3 @@
-# api
 API Integration
 
 # 🚀 API Aggregator Service – Spring Boot
