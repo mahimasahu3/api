@@ -20,7 +20,6 @@ public class DataService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    // Fetch and Cache
     public void refreshCache() {
         try {
             Post[] posts = restTemplate.getForObject(POSTS_URL, Post[].class);
