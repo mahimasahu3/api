@@ -67,8 +67,6 @@ This API provides sample posts in JSON format, useful for learning, demos, and p
 * RestTemplate
 * Maven
 
----
-
 ## 📦 Dependencies (pom.xml)
 
 Minimum dependencies:
@@ -140,5 +138,5 @@ json
 
 ## 🙋‍♀️ Author
 
-Your Name (Mahima Sahu)
+Mahima Sahu
 
